@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Garamond', sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color:#A1ABD7;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            font-size: 40px;
+        }
+
+        nav {
+            background-color: #919AC2;
+            padding: 10px;
+            font-size: 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+    
+    </style>
+    <title>ely.graphicart - Portfolio</title>
+</head>
+<body>
+   
+    <header>
+        <img src="immagini/logo.png"font-weight="110px" height="110px" align="center">
+        <p >ely.graphicart</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contattami">Contattami</a></li>
+        </ul>
+    </nav>
+
+    
+    <section id="Ciao!">
+       
+
+    <p ><img src="immagini/ritratto.png"font-weight="800px" height="800px" style="  float: right;">
+        <br><br><br><br><br><br><br><br><br><br>
+           <h1 style="font-size: 90px">Elisa Miramonti</h1>
+           <p style="font-size: 30px">Graphic Designer e illustratrice vettoriale</p>
+    </p>
+
+</body>
+</html>
