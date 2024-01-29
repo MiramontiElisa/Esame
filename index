@@ -4,44 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        body {
-            font-family: 'Garamond';
-            background-color: #f4f4f4;
-        }
+        body {font-family: 'Garamond';
+            background-color: #f4f4f4;}
 
-        header {
-            background-color:#A1ABD7;
+        header { background-color:#A1ABD7;
             color: #fff;
             text-align: center;
             padding: 20px;
-            font-size: 40px;
-        }
+            font-size: 40px;}
 
-        nav {
-            background-color: #919AC2;
+        nav { background-color: #919AC2;
             padding: 10px;
-            font-size: 20px;
-        }
+            font-size: 20px;}
 
-        nav ul {
-            list-style: none;
-            text-align: center;
-        }
+        nav ul {list-style: none;
+            text-align: center;}
 
-        nav li {
-            display: inline;
-            margin-right: 20px;
-        }
+        nav li {display: inline;
+            margin-right: 20px;}
 
-        nav a {
-            text-decoration: none;
+        nav a {text-decoration: none;
             color: #fff;
-            font-weight: bold;
-        }
+            font-weight: bold;}
 
-        section {
-            padding: 20px;
-        }
+        section {padding: 20px;}
 
     
     </style>
