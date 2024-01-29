@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
-            font-family: 'Garamond', sans-serif;
+            font-family: 'Garamond';
             background-color: #f4f4f4;
         }
 
@@ -25,8 +25,6 @@
 
         nav ul {
             list-style: none;
-            margin: 0;
-            padding: 0;
             text-align: center;
         }
 
