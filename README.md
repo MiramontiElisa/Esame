@@ -12,7 +12,7 @@ In questo progetto sono andata a realizzare il mio personale portfolio, un sito 
 # Scopo del repository
 Questo repository serve a creare un sito personale monopagina responsive
 
-# Elementi principali della pagina:
+# Elementi principali della pagina
 - Logo
 - Nome
 - Descrizione (chi sono?)
