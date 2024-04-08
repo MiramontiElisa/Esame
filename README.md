@@ -16,7 +16,7 @@ Questo repository serve a creare un sito personale monopagina responsive
 - Logo
 - Nome
 - Descrizione (chi sono?)
-- Portafoglio
+- Portfoglio
 - Descrizione lavori
 - Footer con contatti e profili social dell'azienda
 
