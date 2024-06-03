@@ -57,6 +57,30 @@
         h3 {
             color: #99B3D1;
         }
+        .introduction {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        .introduction img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .introduction-text {
+            text-align: center;
+        }
+        @media (min-width: 768px) {
+            .introduction {
+                flex-direction: row;
+                align-items: center;
+            }
+            .introduction-text {
+                text-align: left;
+            }
+        }
         .gallery img {
             width: 100%;
             height: auto;
@@ -176,10 +200,13 @@
         </nav>
     </header>
     <div class="container" id="home">
-        <h1>Benvenut@ su elygraphicart</h1>
-        <p>Ciao, sono Elisa! sono una graphic designer e illustratrice,
-            specializzata in illustrazione vettoriale.<br />
-        Qui troverai una piccola selezione dei miei lavori, Buona visione!<br /> Elisa ♥</p>
+        <div class="introduction">
+            <img src="https://via.placeholder.com/400x400" alt="Immagine di Elisa">
+            <div class="introduction-text">
+                <h1>Benvenut@ su elygraphicart</h1>
+                <p>Ciao, sono Elisa! Sono una graphic designer e illustratrice, specializzata in illustrazione vettoriale, qui troverai una piccola selezione dei miei lavori.<br />Ti invito a lasciarti trasportare dalla magia della grafica. Buona visione!<br /><br />Elisa ♥</p>
+            </div>
+        </div>
     </div>
     <div class="container gallery" id="gallery">
         <img src="https://via.placeholder.com/600x600" alt="Lavoro di Grafica 1" onclick="openLightbox('https://via.placeholder.com/600x600')">
