@@ -1,28 +1,241 @@
 <!DOCTYPE html>
-
 <html lang="it">
 <head>
-<link rel="stylesheet" href="style.css">
-<title> elygraphicart</title>
-<meta name="description" content= "Portfolio">
-<meta name="keywords" content= "Portfolio, Graphic, Graphicart, Illustrazione">
-<meta name="author" content= "Miramonti Elisa">
-<meta name="copyright" content= "2021, ACME Novara">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>elygraphicart</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background-color: #6567AC;
+            color: white;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        header img {
+            max-height: 50px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 20px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #99B3D1;
+        }
+        .container {
+            padding: 40px 20px;
+            flex: 1;
+        }
+        h1, h2 {
+            color: #F0C059;
+        }
+
+        h3 {
+            color: #99B3D1;
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+            display: block;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        footer {
+            background-color: #6567AC;
+            color: #fff;
+            padding: 20px 0;
+            width: 100%;
+        }
+        .contact-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            gap: 20px;
+        }
+        .contact-form {
+            max-width: 600px;
+            margin: 0;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            flex: 1;
+        }
+        .contact-form label {
+            display: block;
+            margin-bottom: 5px;
+            color: #99B3D1;
+        }
+        .contact-form input, .contact-form textarea {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .contact-form button {
+            padding: 10px 20px;
+            background-color: #99B3D1;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .contact-form button:hover {
+            background-color: #6567AC;
+        }
+        .email, .instagram {
+            font-size: 1.2em;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .email a, .instagram a {
+            color: #99B3D1;
+            text-decoration: none;
+        }
+        .email a:hover, .instagram a:hover {
+            text-decoration: underline;
+        }
+        .contact-box {
+            background-color: #5D5F9D;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .contact-box h3 {
+            margin-bottom: 10px;
+            color: #ffffff;
+        } 
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        #lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+        #lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+        }
+    </style>
 </head>
-<div class="header">
-    <a href="index.html"><img src="immagini/logo.png"></a>
-    <div class="menu">
-        <a href="portfolio.html">Portfolio</a>
-        <a href="contatti.html">Contatti</a>
+<body>
+    <header>
+        <img src="https://via.placeholder.com/100x100" alt="Logo">
+        <nav>
+            <ul>
+                <li><a href="#home">Chi sono</a></li>
+                <li><a href="#gallery">Galleria</a></li>
+                <li><a href="#contact">Contatti</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container" id="home">
+        <h1>Benvenut@ su elygraphicart</h1>
+        <p>Ciao, sono Elisa! sono una graphic designer e illustratrice,
+            specializzata in illustrazione vettoriale.<br />
+        Qui troverai una piccola selezione dei miei lavori, Buona visione!<br /> Elisa ♥</p>
     </div>
-</div>
+    <div class="container gallery" id="gallery">
+        <img src="https://via.placeholder.com/600x600" alt="Lavoro di Grafica 1" onclick="openLightbox('https://via.placeholder.com/600x600')">
+        <img src="https://via.placeholder.com/600x600" alt="Lavoro di Grafica 2" onclick="openLightbox('https://via.placeholder.com/600x600')">
+        <img src="https://via.placeholder.com/600x600" alt="Lavoro di Grafica 3" onclick="openLightbox('https://via.placeholder.com/600x600')">
+        <img src="https://via.placeholder.com/600x600" alt="Lavoro di Grafica 4" onclick="openLightbox('https://via.placeholder.com/600x600')">
+        <img src="https://via.placeholder.com/600x600" alt="Lavoro di Grafica 5" onclick="openLightbox('https://via.placeholder.com/600x600')">
+        <img src="https://via.placeholder.com/600x600" alt="Lavoro di Grafica 6" onclick="openLightbox('https://via.placeholder.placeholder.com/600x600')">
+        <img src="https://via.placeholder.com/600x600" alt="Lavoro di Grafica 7" onclick="openLightbox('https://via.placeholder.com/600x600')">
+        <img src="https://via.placeholder.com/600x600" alt="Lavoro di Grafica 8" onclick="openLightbox('https://via.placeholder.com/600x600')">
+    </div>
+    <div id="lightbox" onclick="closeLightbox()">
+        <img src="" alt="Immagine ingrandita">
+    </div>
+    <footer>
+        <div class="container" id="contact">
+            <div class="contact-section">
+                <form class="contact-form">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="message">Messaggio:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                    <button type="submit">Invia</button>
+                </form>
+                
+                <form class="contact-form">
+                    <div class="contact-form">
+                        <h3>Contattami</h3>
+                        <div class="email">
+                            <a href="mailto:ely.graphicart@gmail.com">
+                                <i class="fas fa-envelope"></i>
+                                <span>ely.graphicart@gmail.com</span>
+                            </a>
+                        </div>
+                        <div class="instagram">
+                            <a href="https://www.instagram.com/elygraphicart/" target="_blank">
+                                <i class="fab fa-instagram"></i>
+                                <span>@elygraphicart</span>
+                            </a>
+                        </div>
+                    </div>
+                </form>
 
-<div class="box">
-<img src="immagini/ritratto.png">
-</div>
 
-<h4>Elisa Miramonti</h4>
-<h4>Graphic Designer e illustratrice</h4>
+            </div>
+        </div>
+    </footer>
 
+    <script>
+        function openLightbox(imgSrc) {
+            document.querySelector('#lightbox img').src = imgSrc;
+            document.getElementById('lightbox').style.display = 'flex';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+        }
+    </script>
 </body>
 </html>
