@@ -16,11 +16,12 @@ Questo repository serve a creare un sito personale monopagina responsive
 - Logo
 - Nome
 - Descrizione (chi sono?)
-- Portfoglio
-- Descrizione lavori
-- Footer con contatti e profili social dell'azienda
+- Portfolio
+- Footer con contatti e profilo social
 
 # Caratteristiche struttura e elementi pagina
-- Html5
+- Html
+- CSS
+- Javascript
 
 # Netifly
