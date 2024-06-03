@@ -22,6 +22,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+            flex-wrap: wrap;
         }
         header img {
             max-height: 50px;
@@ -32,6 +33,10 @@
             margin: 0;
             display: flex;
             gap: 20px;
+            flex-wrap: wrap;
+        }
+        nav ul li {
+            margin: 0;
         }
         nav ul li a {
             color: #fff;
@@ -49,7 +54,6 @@
         h1, h2 {
             color: #F0C059;
         }
-
         h3 {
             color: #99B3D1;
         }
@@ -66,7 +70,7 @@
         }
         .gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
         }
         footer {
@@ -77,18 +81,18 @@
         }
         .contact-section {
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
             align-items: center;
-            padding: 20px;
             gap: 20px;
         }
-        .contact-form {
+        .contact-form, .contact-box {
+            width: 100%;
             max-width: 600px;
-            margin: 0;
             padding: 20px;
             background-color: #fff;
             border-radius: 10px;
-            flex: 1;
+            box-sizing: border-box;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         .contact-form label {
             display: block;
@@ -96,11 +100,12 @@
             color: #99B3D1;
         }
         .contact-form input, .contact-form textarea {
-            width: calc(100% - 20px);
+            width: 100%;
             padding: 10px;
             margin: 10px 0;
             border: 1px solid #ccc;
             border-radius: 5px;
+            box-sizing: border-box;
         }
         .contact-form button {
             padding: 10px 20px;
@@ -129,9 +134,6 @@
         }
         .contact-box {
             background-color: #5D5F9D;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         .contact-box h3 {
             margin-bottom: 10px;
@@ -141,6 +143,7 @@
             display: flex;
             justify-content: center;
             gap: 20px;
+            flex-wrap: wrap;
         }
         #lightbox {
             position: fixed;
@@ -184,7 +187,7 @@
         <img src="https://via.placeholder.com/600x600" alt="Lavoro di Grafica 3" onclick="openLightbox('https://via.placeholder.com/600x600')">
         <img src="https://via.placeholder.com/600x600" alt="Lavoro di Grafica 4" onclick="openLightbox('https://via.placeholder.com/600x600')">
         <img src="https://via.placeholder.com/600x600" alt="Lavoro di Grafica 5" onclick="openLightbox('https://via.placeholder.com/600x600')">
-        <img src="https://via.placeholder.com/600x600" alt="Lavoro di Grafica 6" onclick="openLightbox('https://via.placeholder.placeholder.com/600x600')">
+        <img src="https://via.placeholder.com/600x600" alt="Lavoro di Grafica 6" onclick="openLightbox('https://via.placeholder.com/600x600')">
         <img src="https://via.placeholder.com/600x600" alt="Lavoro di Grafica 7" onclick="openLightbox('https://via.placeholder.com/600x600')">
         <img src="https://via.placeholder.com/600x600" alt="Lavoro di Grafica 8" onclick="openLightbox('https://via.placeholder.com/600x600')">
     </div>
@@ -203,26 +206,21 @@
                     <textarea id="message" name="message" rows="5" required></textarea>
                     <button type="submit">Invia</button>
                 </form>
-                
-                <form class="contact-form">
-                    <div class="contact-form">
-                        <h3>Contattami</h3>
-                        <div class="email">
-                            <a href="mailto:ely.graphicart@gmail.com">
-                                <i class="fas fa-envelope"></i>
-                                <span>ely.graphicart@gmail.com</span>
-                            </a>
-                        </div>
-                        <div class="instagram">
-                            <a href="https://www.instagram.com/elygraphicart/" target="_blank">
-                                <i class="fab fa-instagram"></i>
-                                <span>@elygraphicart</span>
-                            </a>
-                        </div>
+                <div class="contact-box">
+                    <h3>Contattami</h3>
+                    <div class="email">
+                        <a href="mailto:ely.graphicart@gmail.com">
+                            <i class="fas fa-envelope"></i>
+                            <span>ely.graphicart@gmail.com</span>
+                        </a>
                     </div>
-                </form>
-
-
+                    <div class="instagram">
+                        <a href="https://www.instagram.com/elygraphicart/" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                            <span>@elygraphicart</span>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
