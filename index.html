@@ -150,7 +150,7 @@
             gap: 10px;
         }
         .email a, .instagram a {
-            color: #99B3D1;
+            color: #fff;
             text-decoration: none;
         }
         .email a:hover, .instagram a:hover {
@@ -186,11 +186,41 @@
             max-height: 90%;
             border-radius: 10px;
         }
+        .second-footer {
+            background-color: #5D5F9D;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: auto;
+        }
+        .second-footer p {
+            margin: 0;
+        }
+
+        #scrollToTopBtn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none;
+            background-color: #99B3D1;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 1.5em;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s ease, display 0.3s ease;
+        }
+        #scrollToTopBtn:hover {
+            background-color: #F0C059;
+        }
     </style>
 </head>
 <body>
     <header>
-        <img src="https://via.placeholder.com/100x100" alt="Logo">
+        <img src="immagini/logo.png" alt="Logo">
         <nav>
             <ul>
                 <li><a href="#home">Chi sono</a></li>
@@ -201,25 +231,25 @@
     </header>
     <div class="container" id="home">
         <div class="introduction">
-            <img src="https://via.placeholder.com/400x400" alt="Immagine di Elisa">
+            <img src="immagini/elisa.jpg" alt="Immagine di Elisa">
             <div class="introduction-text">
                 <h1>Benvenut@ su elygraphicart!</h1>
-                <p>Ciao sono Elisa, Sono una graphic designer e illustratrice, specializzata in illustrazione vettoriale, qui troverai una piccola selezione dei miei lavori.<br />Ti invito a lasciarti trasportare dalla magia della grafica. Buona visione!<br /><br />Elisa ♥</p>
+                <p>Ciao sono Elisa. Sono una graphic designer e illustratrice, specializzata in illustrazione vettoriale, qui troverai una piccola selezione dei miei lavori.<br />Ti invito a lasciarti trasportare dalla magia della grafica. Buona visione!<br /><br />Elisa ♥</p>
             </div>
         </div>
     </div>
     <div class="container gallery" id="gallery">
-        <img src="https://via.placeholder.com/600x600" alt="Lavoro di Grafica 1" onclick="openLightbox('https://via.placeholder.com/600x600')">
-        <img src="https://via.placeholder.com/600x600" alt="Lavoro di Grafica 2" onclick="openLightbox('https://via.placeholder.com/600x600')">
-        <img src="https://via.placeholder.com/600x600" alt="Lavoro di Grafica 3" onclick="openLightbox('https://via.placeholder.com/600x600')">
-        <img src="https://via.placeholder.com/600x600" alt="Lavoro di Grafica 4" onclick="openLightbox('https://via.placeholder.com/600x600')">
-        <img src="https://via.placeholder.com/600x600" alt="Lavoro di Grafica 5" onclick="openLightbox('https://via.placeholder.com/600x600')">
-        <img src="https://via.placeholder.com/600x600" alt="Lavoro di Grafica 6" onclick="openLightbox('https://via.placeholder.com/600x600')">
-        <img src="https://via.placeholder.com/600x600" alt="Lavoro di Grafica 7" onclick="openLightbox('https://via.placeholder.com/600x600')">
-        <img src="https://via.placeholder.com/600x600" alt="Lavoro di Grafica 8" onclick="openLightbox('https://via.placeholder.com/600x600')">
+        <img src="immagini/rajatea.jpg" alt="Lavoro di Grafica 1" onclick="openLightbox('immagini/rajatea.jpg')">
+        <img src="immagini/lacodadeldrago.jpg" alt="Lavoro di Grafica 2" onclick="openLightbox('immagini/lacodadeldrago.jpg')">
+        <img src="immagini/sirenetta.jpg" alt="Lavoro di Grafica 3" onclick="openLightbox('immagini/sirenetta.jpg')">
+        <img src="immagini/peterpan.jpg" alt="Lavoro di Grafica 4" onclick="openLightbox('immagini/peterpan.jpg')">
+        <img src="immagini/marypoppins.jpg" alt="Lavoro di Grafica 5" onclick="openLightbox('immagini/marypoppins.jpg')">
+        <img src="immagini/jerry.jpg" alt="Lavoro di Grafica 6" onclick="openLightbox('immagini/jerry.jpg')">
+        <img src="immagini/drago.jpg" alt="Lavoro di Grafica 7" onclick="openLightbox('immagini/drago.jpg')">
+        <img src="immagini/dislessia.jpg" alt="Lavoro di Grafica 8" onclick="openLightbox('immagini/dislessia.jpg')">
     </div>
     <div id="lightbox" onclick="closeLightbox()">
-        <img src="" alt="Immagine ingrandita">
+        <img src="url_dell_immagine.jpg" alt="Immagine ingrandita">
     </div>
     <footer>
         <div class="container" id="contact">
@@ -234,7 +264,7 @@
                     <button type="submit">Invia</button>
                 </form>
                 <div class="contact-box">
-                    <h3>Contattami</h3>
+                    <h3>Lavoriamo insieme:</h3>
                     <div class="email">
                         <a href="mailto:ely.graphicart@gmail.com">
                             <i class="fas fa-envelope"></i>
@@ -252,6 +282,15 @@
         </div>
     </footer>
 
+    <footer class="second-footer">
+        <p>&copy; 2024 elygraphicart. Tutti i diritti riservati.</p>
+    </footer>
+
+    <button id="scrollToTopBtn" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+
     <script>
         function openLightbox(imgSrc) {
             document.querySelector('#lightbox img').src = imgSrc;
@@ -260,6 +299,22 @@
 
         function closeLightbox() {
             document.getElementById('lightbox').style.display = 'none';
+        }
+
+        const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollToTopBtn.style.display = 'block';
+            } else {
+                scrollToTopBtn.style.display = 'none';
+            }
+        });
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         }
     </script>
 </body>
