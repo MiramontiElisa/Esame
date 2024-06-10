@@ -14,10 +14,11 @@ Questo repository serve a creare un sito personale monopagina responsive
 
 # Elementi principali della pagina
 - Logo
+- Barra di navigazione
 - Nome
 - Descrizione (chi sono?)
 - Portfolio
-- Footer con contatti e profilo social
+- Contatti
 
 # Caratteristiche struttura e elementi pagina
 - Html
