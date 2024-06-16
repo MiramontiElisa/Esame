@@ -26,3 +26,4 @@ Questo repository serve a creare un sito personale monopagina responsive
 - Javascript
 
 # Netifly
+https://soft-syrniki-feddaf.netlify.app
