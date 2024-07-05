@@ -11,61 +11,67 @@
 </head>
 <body>
     <header>
-        <img src="immagini/logo.png" alt="Logo elygraphicart">
+        <img src="immagini/logo.png" alt="Logo di elygraphicart" aria-label="Logo di elygraphicart">
         <nav>
             <ul>
-                <li><a href="#home">Chi sono</a></li>
+                <li><a href="#home">Chi Sono</a></li>
                 <li><a href="#gallery">Galleria</a></li>
                 <li><a href="#contact">Contatti</a></li>
             </ul>
         </nav>
     </header>
-    <div class="container" id="home">
-        <div class="introduction">
-            <img src="immagini/elisa.jpg" alt="Immagine di Elisa">
-            <div class="introduction-text">
-                <h1>Benvenut@ su elygraphicart!</h1>
-                <p>Ciao sono Elisa. Sono una graphic designer e illustratrice, specializzata in illustrazione vettoriale, qui troverai una piccola selezione dei miei lavori.<br />Ti invito a lasciarti trasportare dalla magia della grafica. Buona visione!<br /><br />Elisa ♥</p>
+
+    <main>
+        <section class="container" id="home">
+            <div class="introduction">
+                <img src="immagini/elisa.jpg" alt="Immagine di Elisa" aria-label="Immagine di Elisa">
+                <div class="introduction-text">
+                    <h1>Benvenut@ su Elygraphicart!</h1>
+                    <p>Ciao, sono Elisa. Sono una graphic designer e illustratrice specializzata in illustrazione vettoriale. Qui troverai una piccola selezione dei miei lavori.<br>Ti invito a lasciarti trasportare dalla magia della grafica. Buona visione!<br><br>Elisa</p>
+                </div>
             </div>
-        </div>
-    </div>
-    <div class="container gallery" id="gallery">
-        <div class="gallery-item">
-            <img src="immagini/rajatea.jpg" alt="Lavoro di Grafica 1" onclick="openLightbox('immagini/rajatea.jpg')">
-            <span>Raja Tea</span>
-        </div>
-        <div class="gallery-item">
-            <img src="immagini/lacodadeldrago.jpg" alt="Lavoro di Grafica 2" onclick="openLightbox('immagini/lacodadeldrago.jpg')">
-            <span>Gioco da tavolo "La Coda del Drago"</span>
-        </div>
-        <div class="gallery-item">
-            <img src="immagini/sirenetta.jpg" alt="Lavoro di Grafica 3" onclick="openLightbox('immagini/sirenetta.jpg')">
-            <span>La Sirenetta</span>
-        </div>
-        <div class="gallery-item">
-            <img src="immagini/peterpan.jpg" alt="Lavoro di Grafica 4" onclick="openLightbox('immagini/peterpan.jpg')">
-            <span>Peter Pan</span>
-        </div>
-        <div class="gallery-item">
-            <img src="immagini/marypoppins.jpg" alt="Lavoro di Grafica 5" onclick="openLightbox('immagini/marypoppins.jpg')">
-            <span>Mary Poppins</span>
-        </div>
-        <div class="gallery-item">
-            <img src="immagini/jerry.jpg" alt="Lavoro di Grafica 6" onclick="openLightbox('immagini/jerry.jpg')">
-            <span>Jerry il riccio</span>
-        </div>
-        <div class="gallery-item">
-            <img src="immagini/drago.jpg" alt="Lavoro di Grafica 7" onclick="openLightbox('immagini/drago.jpg')">
-            <span>Un drago da compagnia</span>
-        </div>
-        <div class="gallery-item">
-            <img src="immagini/dislessia.jpg" alt="Lavoro di Grafica 8" onclick="openLightbox('immagini/dislessia.jpg')">
-            <span>Dislessia</span>
-        </div>
-    </div>
-    <div id="lightbox" onclick="closeLightbox()" aria-label="Immagine ingrandita">
-        <img src="" alt="Immagine ingrandita">
-    </div>
+        </section>
+
+        <section class="container gallery" id="gallery">
+            <div class="gallery-item">
+                <img src="immagini/rajatea.jpg" alt="Lavoro di Grafica: Raja Tea" onclick="openLightbox('immagini/rajatea.jpg')">
+                <span>Raja Tea</span>
+            </div>
+            <div class="gallery-item">
+                <img src="immagini/lacodadeldrago.jpg" alt="Lavoro di Grafica: Gioco da tavolo 'La Coda del Drago'" onclick="openLightbox('immagini/lacodadeldrago.jpg')">
+                <span>Gioco da tavolo "La Coda del Drago"</span>
+            </div>
+            <div class="gallery-item">
+                <img src="immagini/sirenetta.jpg" alt="Lavoro di Grafica: La Sirenetta" onclick="openLightbox('immagini/sirenetta.jpg')">
+                <span>La Sirenetta</span>
+            </div>
+            <div class="gallery-item">
+                <img src="immagini/peterpan.jpg" alt="Lavoro di Grafica: Peter Pan" onclick="openLightbox('immagini/peterpan.jpg')">
+                <span>Peter Pan</span>
+            </div>
+            <div class="gallery-item">
+                <img src="immagini/marypoppins.jpg" alt="Lavoro di Grafica: Mary Poppins" onclick="openLightbox('immagini/marypoppins.jpg')">
+                <span>Mary Poppins</span>
+            </div>
+            <div class="gallery-item">
+                <img src="immagini/jerry.jpg" alt="Lavoro di Grafica: Jerry il Riccio" onclick="openLightbox('immagini/jerry.jpg')">
+                <span>Jerry il Riccio</span>
+            </div>
+            <div class="gallery-item">
+                <img src="immagini/drago.jpg" alt="Lavoro di Grafica: Un Drago da Compagnia" onclick="openLightbox('immagini/drago.jpg')">
+                <span>Un Drago da Compagnia</span>
+            </div>
+            <div class="gallery-item">
+                <img src="immagini/dislessia.jpg" alt="Lavoro di Grafica: Dislessia" onclick="openLightbox('immagini/dislessia.jpg')">
+                <span>Dislessia</span>
+            </div>
+        </section>
+
+        <section id="lightbox" onclick="closeLightbox()" aria-label="Immagine Ingrandita">
+            <img src="" alt="Immagine Ingrandita">
+        </section>
+    </main>
+
     <footer>
         <div class="container" id="contact">
             <div class="contact-map-container">
@@ -79,34 +85,31 @@
                         <textarea id="message" name="message" rows="5" required></textarea>
                         <button type="submit">Invia</button>
                     </form>
-                    <div class="contact-info">
-                        <div class="email">
-                            <a href="mailto:ely.graphicart@gmail.com">
-                                <i class="fas fa-envelope"></i>
-                                <span>ely.graphicart@gmail.com</span>
-                            </a>
-                        </div>
-                        <div class="instagram">
-                            <a href="https://www.instagram.com/elygraphicart/" target="_blank">
-                                <i class="fab fa-instagram"></i>
-                                <span>@elygraphicart</span>
-                            </a>
-                        </div>
-                    </div>
                 </div>
                 <div class="map-section">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5566.372951735157!2d8.609575623545314!3d45.45361706574453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47883dbb52496373%3A0xc5c89d1b2a500cc6!2sVia%20Costantino%20Porta%2C%2025%2C%2018110%20Novara%20NO!5e0!3m2!1sen!2sit!4v1623849186464!5m2!1sen!2sit" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5566.372951735157!2d8.609575623545314!3d45.45361706574453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47883dbb52496373%3A0xc5c89d1b2a500cc6!2sVia%20Costantino%20Porta%2C%2025%2C%2018110%20Novara%20NO!5e0!3m2!1sen!2sit!4v1623849186464!5m2!1sen!2sit" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" aria-label="Mappa della posizione di Elisa"></iframe>
                 </div>
             </div>
         </div>
     </footer>
-    
-    <!-- Second footer -->
+
     <footer class="second-footer">
-        <p>&copy; 2024 elygraphicart. Tutti i diritti riservati.</p>
+        <div class="contact-info">
+            <div class="email">
+                <a href="mailto:ely.graphicart@gmail.com">
+                    <i class="fas fa-envelope"></i>
+                    <span>ely.graphicart@gmail.com</span>
+                </a>
+            </div>
+            <div class="instagram">
+                <a href="https://www.instagram.com/elygraphicart/" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-instagram"></i>
+                    <span>@elygraphicart</span>
+                </a>
+            </div>
+        </div>
     </footer>
 
-    <!-- Scroll to Top Button -->
     <button id="scrollToTopBtn" onclick="scrollToTop()" aria-label="Torna in cima">
         <i class="fas fa-arrow-up"></i>
     </button>
@@ -121,7 +124,6 @@
             document.getElementById('lightbox').style.display = 'none';
         }
 
-        // Scroll to Top Button
         const scrollToTopBtn = document.getElementById('scrollToTopBtn');
         window.addEventListener('scroll', () => {
             if (window.pageYOffset > 300) {
