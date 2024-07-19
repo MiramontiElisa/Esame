@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Elygraphicart - Graphic designer e illustratrice specializzata in illustrazione vettoriale. Scopri i miei lavori e contattami per collaborazioni.">
     <meta name="keywords" content="graphic design, illustrazione, vettoriale, elygraphicart, Elisa, galleria, contatti">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>elygraphicart</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.min.css"> <!-- Minifica e rinomina il file CSS -->
 </head>
 <body>
     <header>
-        <img src="immagini/logo.webp" alt="Logo di elygraphicart" aria-label="Logo di elygraphicart">
+        <img src="immagini/logo.webp" alt="Logo di elygraphicart" loading="lazy" aria-label="Logo di elygraphicart">
         <nav>
             <ul>
                 <li><a href="#home">Chi Sono</a></li>
@@ -24,45 +26,45 @@
     <main>
         <section class="container" id="home">
             <div class="introduction">
-                <img src="immagini/elisa.webp" alt="Immagine di Elisa" aria-label="Immagine di Elisa">
+                <img src="immagini/elisa.webp" alt="Immagine di Elisa" loading="lazy" aria-label="Immagine di Elisa">
                 <div class="introduction-text">
                     <h1>Benvenut@ su Elygraphicart!</h1>
-                    <p>Ciao, sono <strong>Elisa</strong>. Sono una <strong> graphic designer e illustratrice </strong>  specializzata in <strong>illustrazione vettoriale</strong>.Qui troverai una piccola selezione dei miei lavori.<br><strong>Ti invito a lasciarti trasportare dalla magia della grafica.<br>Buona visione!
+                    <p>Ciao, sono <strong>Elisa</strong>. Sono una <strong> graphic designer e illustratrice </strong>  specializzata in <strong>illustrazione vettoriale</strong>. Qui troverai una piccola selezione dei miei lavori.<br><strong>Ti invito a lasciarti trasportare dalla magia della grafica.<br>Buona visione!</strong></p>
                 </div>
             </div>
         </section>
 
         <section class="container gallery" id="gallery">
             <div class="gallery-item">
-                <img src="immagini/rajatea.webp" alt="Lavoro di Grafica: Raja Tea" onclick="openLightbox('immagini/rajatea.webp')">
+                <img src="immagini/rajatea.webp" alt="Lavoro di Grafica: Raja Tea" loading="lazy" onclick="openLightbox('immagini/rajatea.webp')">
                 <span>Raja Tea</span>
             </div>
             <div class="gallery-item">
-                <img src="immagini/lacodadeldrago.webp" alt="Lavoro di Grafica: Gioco da tavolo 'La Coda del Drago'" onclick="openLightbox('immagini/lacodadeldrago.webp')">
+                <img src="immagini/lacodadeldrago.webp" alt="Lavoro di Grafica: Gioco da tavolo 'La Coda del Drago'" loading="lazy" onclick="openLightbox('immagini/lacodadeldrago.webp')">
                 <span>Gioco da tavolo "La Coda del Drago"</span>
             </div>
             <div class="gallery-item">
-                <img src="immagini/sirenetta.webp" alt="Lavoro di Grafica: La Sirenetta" onclick="openLightbox('immagini/sirenetta.webp')">
+                <img src="immagini/sirenetta.webp" alt="Lavoro di Grafica: La Sirenetta" loading="lazy" onclick="openLightbox('immagini/sirenetta.webp')">
                 <span>La Sirenetta</span>
             </div>
             <div class="gallery-item">
-                <img src="immagini/peterpan.webp" alt="Lavoro di Grafica: Peter Pan" onclick="openLightbox('immagini/peterpan.webp')">
+                <img src="immagini/peterpan.webp" alt="Lavoro di Grafica: Peter Pan" loading="lazy" onclick="openLightbox('immagini/peterpan.webp')">
                 <span>Peter Pan</span>
             </div>
             <div class="gallery-item">
-                <img src="immagini/marypoppins.webp" alt="Lavoro di Grafica: Mary Poppins" onclick="openLightbox('immagini/marypoppins.webp')">
+                <img src="immagini/marypoppins.webp" alt="Lavoro di Grafica: Mary Poppins" loading="lazy" onclick="openLightbox('immagini/marypoppins.webp')">
                 <span>Mary Poppins</span>
             </div>
             <div class="gallery-item">
-                <img src="immagini/jerry.webp" alt="Lavoro di Grafica: Jerry il Riccio" onclick="openLightbox('immagini/jerry.webp')">
+                <img src="immagini/jerry.webp" alt="Lavoro di Grafica: Jerry il Riccio" loading="lazy" onclick="openLightbox('immagini/jerry.webp')">
                 <span>Jerry il Riccio</span>
             </div>
             <div class="gallery-item">
-                <img src="immagini/drago.webp" alt="Lavoro di Grafica: Un Drago da Compagnia" onclick="openLightbox('immagini/drago.webp')">
+                <img src="immagini/drago.webp" alt="Lavoro di Grafica: Un Drago da Compagnia" loading="lazy" onclick="openLightbox('immagini/drago.webp')">
                 <span>Un Drago da Compagnia</span>
             </div>
             <div class="gallery-item">
-                <img src="immagini/dislessia.webp" alt="Lavoro di Grafica: Dislessia" onclick="openLightbox('immagini/dislessia.webp')">
+                <img src="immagini/dislessia.webp" alt="Lavoro di Grafica: Dislessia" loading="lazy" onclick="openLightbox('immagini/dislessia.webp')">
                 <span>Dislessia</span>
             </div>
         </section>
@@ -114,7 +116,7 @@
         <i class="fas fa-arrow-up"></i>
     </button>
     
-    <script>
+    <script defer>
         function openLightbox(imgSrc) {
             const lightboxImage = document.querySelector('#lightbox img');
             const lightbox = document.getElementById('lightbox');
@@ -134,19 +136,13 @@
         const scrollToTopBtn = document.getElementById('scrollToTopBtn');
         if (scrollToTopBtn) {
             window.addEventListener('scroll', () => {
-                if (window.pageYOffset > 300) {
-                    scrollToTopBtn.style.display = 'block';
-                } else {
-                    scrollToTopBtn.style.display = 'none';
-                }
+                scrollToTopBtn.style.display = window.pageYOffset > 300 ? 'block' : 'none';
             });
-            scrollToTopBtn.addEventListener('click', scrollToTop);
-        }
-
-        function scrollToTop() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
+            scrollToTopBtn.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
             });
         }
     </script>
