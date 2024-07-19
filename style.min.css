@@ -31,18 +31,14 @@ nav ul {
     flex-wrap: wrap;
 }
 
-nav ul li {
-    margin: 0;
-}
-
-nav ul li a {
+nav a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
-nav ul li a:hover {
+nav a:hover {
     color: #99B3D1;
 }
 
@@ -52,7 +48,7 @@ nav ul li a:hover {
 }
 
 h1, h2 {
-    color: #F0C059;
+    color: #5D5F9D;
 }
 
 h3 {
@@ -117,7 +113,7 @@ h3 {
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.411);
+    background-color: rgba(0, 0, 0, 0.4);
     color: #fff;
     text-align: center;
     padding: 10px;
@@ -129,16 +125,18 @@ h3 {
     opacity: 1;
 }
 
+footer, .second-footer {
+    color: #fff;
+}
+
 footer {
     background-color: #6567AC;
-    color: #fff;
     padding: 20px 0;
     width: 100%;
 }
 
 .second-footer {
     background-color: #5D5F9D;
-    color: #fff;
     text-align: center;
     padding: 10px 0;
     margin-top: auto;
@@ -172,7 +170,7 @@ footer {
 .contact-form label {
     display: block;
     margin-bottom: 5px;
-    color: #99B3D1;
+    color: #5D5F9D;
 }
 
 .contact-form input, .contact-form textarea {
@@ -186,7 +184,7 @@ footer {
 
 .contact-form button {
     padding: 10px 20px;
-    background-color: #99B3D1;
+    background-color: #5D5F9D;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -195,7 +193,7 @@ footer {
 }
 
 .contact-form button:hover {
-    background-color: #6567AC;
+    background-color: #99B3D1;
     transform: scale(1.05);
 }
 
