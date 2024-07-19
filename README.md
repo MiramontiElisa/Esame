@@ -13,12 +13,12 @@ In questo progetto sono andata a realizzare il mio personale portfolio, un sito 
 Questo repository serve a creare un sito personale monopagina responsive
 
 # Elementi principali della pagina
-- Logo
-- Barra di navigazione
-- Nome
-- Descrizione (chi sono?)
+- Logo con barra di navigazione
+- Descrizione
 - Portfolio
-- Contatti
+- Contact from
+- Posizione (link Google maps)
+- Contatti (instagram e email)
 
 # Caratteristiche struttura e elementi pagina
 - Html
