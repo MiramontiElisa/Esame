@@ -1,155 +1,298 @@
-<!DOCTYPE html>
-<html lang="it">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Elygraphicart - Graphic designer e illustratrice specializzata in illustrazione vettoriale. Scopri i miei lavori e contattami per collaborazioni.">
-    <meta name="keywords" content="graphic design, illustrazione, vettoriale, elygraphicart, Elisa, galleria, contatti">
-    <title>elygraphicart</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <img src="immagini/logo.webp" alt="Logo di elygraphicart" aria-label="Logo di elygraphicart">
-        <nav>
-            <ul>
-                <li><a href="#home">Chi Sono</a></li>
-                <li><a href="#gallery">Galleria</a></li>
-                <li><a href="#contact">Contatti</a></li>
-            </ul>
-        </nav>
-    </header>
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 
-    <main>
-        <section class="container" id="home">
-            <div class="introduction">
-                <img src="immagini/elisa.webp" alt="Immagine di Elisa" aria-label="Immagine di Elisa">
-                <div class="introduction-text">
-                    <h1>Benvenut@ su Elygraphicart!</h1>
-                    <p>Ciao, sono Elisa. Sono una graphic designer e illustratrice specializzata in illustrazione vettoriale. Qui troverai una piccola selezione dei miei lavori.<br>Ti invito a lasciarti trasportare dalla magia della grafica. Buona visione!<br><br>Elisa</p>
-                </div>
-            </div>
-        </section>
+header {
+    background-color: #6567AC;
+    color: white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
 
-        <section class="container gallery" id="gallery">
-            <div class="gallery-item">
-                <img src="immagini/rajatea.webp" alt="Lavoro di Grafica: Raja Tea" onclick="openLightbox('immagini/rajatea.webp')">
-                <span>Raja Tea</span>
-            </div>
-            <div class="gallery-item">
-                <img src="immagini/lacodadeldrago.webp" alt="Lavoro di Grafica: Gioco da tavolo 'La Coda del Drago'" onclick="openLightbox('immagini/lacodadeldrago.webp')">
-                <span>Gioco da tavolo "La Coda del Drago"</span>
-            </div>
-            <div class="gallery-item">
-                <img src="immagini/sirenetta.webp" alt="Lavoro di Grafica: La Sirenetta" onclick="openLightbox('immagini/sirenetta.webp')">
-                <span>La Sirenetta</span>
-            </div>
-            <div class="gallery-item">
-                <img src="immagini/peterpan.webp" alt="Lavoro di Grafica: Peter Pan" onclick="openLightbox('immagini/peterpan.webp')">
-                <span>Peter Pan</span>
-            </div>
-            <div class="gallery-item">
-                <img src="immagini/marypoppins.webp" alt="Lavoro di Grafica: Mary Poppins" onclick="openLightbox('immagini/marypoppins.webp')">
-                <span>Mary Poppins</span>
-            </div>
-            <div class="gallery-item">
-                <img src="immagini/jerry.webp" alt="Lavoro di Grafica: Jerry il Riccio" onclick="openLightbox('immagini/jerry.webp')">
-                <span>Jerry il Riccio</span>
-            </div>
-            <div class="gallery-item">
-                <img src="immagini/drago.webp" alt="Lavoro di Grafica: Un Drago da Compagnia" onclick="openLightbox('immagini/drago.webp')">
-                <span>Un Drago da Compagnia</span>
-            </div>
-            <div class="gallery-item">
-                <img src="immagini/dislessia.webp" alt="Lavoro di Grafica: Dislessia" onclick="openLightbox('immagini/dislessia.webp')">
-                <span>Dislessia</span>
-            </div>
-        </section>
+header img {
+    max-height: 50px;
+}
 
-        <section id="lightbox" onclick="closeLightbox()" aria-label="Immagine Ingrandita">
-            <img src="" alt="Immagine Ingrandita">
-        </section>
-    </main>
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
 
-    <footer>
-        <div class="container" id="contact">
-            <div class="contact-map-container">
-                <div class="contact-section">
-                    
-        <form name="contact" method="POST" data-netlify="true" class="contact-form">
-                <label for="name">Nome:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="message">Messaggio:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-                <button type="submit">Invia</button>
-        </form>
+nav ul li {
+    margin: 0;
+}
 
-                </div>
-                <div class="map-section">
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
 
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5566.372951735157!2d8.609575623545314!3d45.45361706574453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47883dbb52496373%3A0xc5c89d1b2a500cc6!2sVia%20Costantino%20Porta%2C%2025%2C%2018110%20Novara%20NO!5e0!3m2!1sen!2sit!4v1623849186464!5m2!1sen!2sit" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" aria-label="Mappa della posizione di Elisa"></iframe>
-                    
-                </div>
-            </div>
-        </div>
-    </footer>
+nav ul li a:hover {
+    color: #99B3D1;
+}
 
-    <footer class="second-footer">
-        <div class="contact-info">
-            <div class="email">
-                <a href="mailto:ely.graphicart@gmail.com">
-                    <i class="fas fa-envelope"></i>
-                    <span>ely.graphicart@gmail.com</span>
-                </a>
-            </div>
-            <div class="instagram">
-                <a href="https://www.instagram.com/elygraphicart/" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-instagram"></i>
-                    <span>@elygraphicart</span>
-                </a>
-            </div>
-        </div>
-    </footer>
+.container {
+    padding: 40px 20px;
+    flex: 1;
+}
 
-    <button id="scrollToTopBtn" onclick="scrollToTop()" aria-label="Torna in cima">
-        <i class="fas fa-arrow-up"></i>
-    </button>
-    
-    <script>
-        function openLightbox(imgSrc) {
-            const lightboxImage = document.querySelector('#lightbox img');
-            const lightbox = document.getElementById('lightbox');
-            if (lightboxImage && lightbox) {
-                lightboxImage.src = imgSrc;
-                lightbox.style.display = 'flex';
-            }
-        }    
-        function closeLightbox() {
-            const lightbox = document.getElementById('lightbox');
-            if (lightbox) {
-                lightbox.style.display = 'none';
-            }
-        }    
-        const scrollToTopBtn = document.getElementById('scrollToTopBtn');
-        if (scrollToTopBtn) {
-            window.addEventListener('scroll', () => {
-                if (window.pageYOffset > 300) {
-                    scrollToTopBtn.style.display = 'block';
-                } else {
-                    scrollToTopBtn.style.display = 'none';
-                }
-            });
-            scrollToTopBtn.addEventListener('click', scrollToTop);
-        }    
-        function scrollToTop() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        }
-    </script>
-</body>
-</html>
+h1, h2 {
+    color: #F0C059;
+}
+
+h3 {
+    color: #99B3D1;
+}
+
+.introduction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.introduction img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.introduction-text {
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .introduction {
+        flex-direction: row;
+        align-items: center;
+    }
+    .introduction-text {
+        text-align: left;
+    }
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    display: block;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+.gallery-item span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.592);
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover span {
+    opacity: 1;
+}
+
+footer {
+    background-color: #6567AC;
+    color: #fff;
+    padding: 20px 0;
+    width: 100%;
+}
+
+.contact-section, .map-section {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.contact-form {
+    width: 100%;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #99B3D1;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    background-color: #99B3D1;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #6567AC;
+    transform: scale(1.05);
+}
+
+.email, .instagram {
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.email a, .instagram a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.email a:hover, .instagram a:hover {
+    text-decoration: underline;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.map-section iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 10px;
+}
+
+#lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+#lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+}
+
+.second-footer {
+    background-color: #5D5F9D;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto;
+}
+
+.second-footer p {
+    margin: 0;
+}
+
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    background-color: #99B3D1;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5em;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, display 0.3s ease;
+}
+
+#scrollToTopBtn:hover {
+    background-color: #F0C059;
+}
+
+.contact-map-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+@media (min-width: 768px) {
+    .contact-map-container {
+        flex-direction: row;
+        justify-content: center;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-form input, .contact-form textarea {
+        padding: 8px;
+        font-size: 0.9em;
+    }
+    .contact-form button {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+    .email, .instagram {
+        font-size: 1em;
+    }
+}
