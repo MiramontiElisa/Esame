@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -121,33 +120,44 @@
     
     <script>
         function openLightbox(imgSrc) {
-            const lightboxImage = document.querySelector('#lightbox img');
-            const lightbox = document.getElementById('lightbox');
-            if (lightboxImage && lightbox) {
-                lightboxImage.src = imgSrc;
-                lightbox.style.display = 'flex';
-            }
+          const lightboxImage = document.querySelector('#lightbox img');
+          const lightbox = document.getElementById('lightbox');
+      
+          if (lightboxImage && lightbox) {
+            lightboxImage.src = imgSrc;
+            lightbox.style.display = 'flex';
+          }
         }
-
+      
         function closeLightbox() {
-            const lightbox = document.getElementById('lightbox');
-            if (lightbox) {
-                lightbox.style.display = 'none';
-            }
+          const lightbox = document.getElementById('lightbox');
+      
+          if (lightbox) {
+            lightbox.style.display = 'none';
+          }
         }
-
+      
         const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+      
         if (scrollToTopBtn) {
-            window.addEventListener('scroll', () => {
-                scrollToTopBtn.style.display = window.pageYOffset > 300 ? 'block' : 'none';
-            });
-            scrollToTopBtn.addEventListener('click', () => {
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
-            });
+          window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+              scrollToTopBtn.style.display = 'block';
+            } else {
+              scrollToTopBtn.style.display = 'none';
+            }
+          });
+      
+          scrollToTopBtn.addEventListener('click', scrollToTop);
         }
-    </script>
+      
+        function scrollToTop() {
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+        }
+      </script>
+
 </body>
 </html>
